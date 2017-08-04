@@ -1,12 +1,27 @@
 function something()
 {
 
-	var x = window.localStorage.getItem('bbb');
+	var x = window.localStorage.getItem('aaa'); // x = hh['bbb']
 
+	x = x * 1 + 1; // x = x + 1
+
+	window.localStorage.setItem('aaa', x); // hh['bbb'] = x
+
+	alert(x);
+}
+
+function add_to_cart(id)
+{
+	var key = 'product_' + id;
+
+	var x = window.localStorage.getItem(key);
 	x = x * 1 + 1;
+	window.localStorage.setItem(key, x);
 
-	window.localStorage.setItem('bbb', x);
 	update_orders_input();
+	update_orders_button();
+}
+
 }
  
 function update_orders_input()
