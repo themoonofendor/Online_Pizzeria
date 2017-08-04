@@ -3,7 +3,10 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
-set :database, "postgresql:pizzashop.db"
+
+configure :development do
+	set :database, {adapter: 'postgresql',  encoding: 'unicode', database: 'onlinepizzeria.db', pool: 2, username: 'onlinepizzeria', password: 'password1'}
+end
 
 class Product < ActiveRecord::Base
 end
