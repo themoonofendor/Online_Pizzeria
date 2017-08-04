@@ -9,7 +9,7 @@ class AddProducts < ActiveRecord::Migration[5.1]
   		:is_spicy => false,
   		:is_vegetarian => false,
   		:is_best_offer => false,
-  		:path_to_image => '/images/Hawaiian.jpg'
+  		:path_to_image => '/images/hawaiian.jpg'
   		})
 
   	Product.create ({
@@ -20,7 +20,7 @@ class AddProducts < ActiveRecord::Migration[5.1]
   		:is_spicy => false,
   		:is_vegetarian => false,
   		:is_best_offer => true,
-  		:path_to_image => '/images/Pepperoni.jpg'
+  		:path_to_image => '/images/pepperoni.jpg'
   		})
 
   	Product.create ({
@@ -31,7 +31,7 @@ class AddProducts < ActiveRecord::Migration[5.1]
   		:is_spicy => false,
   		:is_vegetarian => false,
   		:is_best_offer => false,
-  		:path_to_image => '/images/Vegetarian.jpg'
+  		:path_to_image => '/images/vegetarian.jpg'
   		})
   end
 end
