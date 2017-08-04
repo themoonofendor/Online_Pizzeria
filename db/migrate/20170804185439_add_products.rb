@@ -7,20 +7,20 @@ class AddProducts < ActiveRecord::Migration[5.1]
   		:price => 15,
   		:size => 14,
   		:is_spicy => false,
-  		:is_veg => false,
+  		:is_vegetarian => false,
   		:is_best_offer => false,
-  		:path_to_image => '/images/hawaiian.jpg'
+  		:path_to_image => '/images/Hawaiian.jpg'
   		})
 
   	Product.create ({
   		:title => 'Pepperoni',
-  		:description => 'Nice Pepperoni pizza',
+  		:description => 'Pepperoni pizza',
   		:price => 10,
   		:size => 14,
   		:is_spicy => false,
-  		:is_veg => false,
+  		:is_vegetarian => false,
   		:is_best_offer => true,
-  		:path_to_image => '/images/pepperoni.jpg'
+  		:path_to_image => '/images/Pepperoni.jpg'
   		})
 
   	Product.create ({
@@ -29,9 +29,9 @@ class AddProducts < ActiveRecord::Migration[5.1]
   		:price => 18,
   		:size => 14,
   		:is_spicy => false,
-  		:is_veg => false,
+  		:is_vegetarian => false,
   		:is_best_offer => false,
-  		:path_to_image => '/images/veg.jpg'
+  		:path_to_image => '/images/Vegetarian.jpg'
   		})
   end
 end
