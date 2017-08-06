@@ -2,6 +2,9 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
+require 'activerecord'
+
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost:4567/onlinepizzeria')
 
 
 set :database, {adapter: 'postgresql',  encoding: 'unicode', database: 'onlinepizzeria'}
