@@ -1,4 +1,4 @@
-class AddProducts < ActiveRecord::Migration[5.1]
+class AddProducts < ActiveRecord::Migration
   def change
 
   	Product.create ({
