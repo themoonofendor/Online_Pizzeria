@@ -8,6 +8,9 @@ set :database, {adapter: 'postgresql',  encoding: 'unicode', database: 'onlinepi
 class Product < ActiveRecord::Base
 end
 
+class Order < ActiveRecord::Base
+end
+
 get '/' do
 	@products = Product.all
 	erb :index
