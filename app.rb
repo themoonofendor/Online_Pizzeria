@@ -3,6 +3,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
+set :bind, '0.0.0.0'
 set :database, {adapter: 'postgresql',  encoding: 'unicode', database: 'onlinepizzeria'}
 
 class Product < ActiveRecord::Base
