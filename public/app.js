@@ -1,15 +1,3 @@
-function something()
-{
-
-	var x = window.localStorage.getItem('aaa'); // x = hh['bbb']
-
-	x = x * 1 + 1; // x = x + 1
-
-	window.localStorage.setItem('aaa', x); // hh['bbb'] = x
-
-	alert(x);
-}
-
 function add_to_cart(id)
 {
 	var key = 'product_' + id;
@@ -22,12 +10,16 @@ function add_to_cart(id)
 	update_orders_button();
 }
 
-}
- 
 function update_orders_input()
 {
- 	var orders = cart_get_orders();
- 	$('#orders_input').val(orders);
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
+}
+
+function update_orders_button()
+{
+	var text = 'Cart (' + cart_get_number_of_items() + ')';
+	$('#orders_button').val(text);
 }
 
 function cart_get_number_of_items()
@@ -36,8 +28,8 @@ function cart_get_number_of_items()
 
 	for(var i = 0; i < window.localStorage.length; i++)
 	{
-		var key = window.localStorage.key(i); // getting a key
-		var value = window.localStorage.getItem(key); // getting a value  (in ruby: hh[key] = x)
+		var key = window.localStorage.key(i); // geting the key
+		var value = window.localStorage.getItem(key); // getting a value, ruby analog : hh[key] = x
 
 		if(key.indexOf('product_') == 0)
 		{
@@ -54,8 +46,8 @@ function cart_get_orders()
 
 	for(var i = 0; i < window.localStorage.length; i++)
 	{
-		var key = window.localStorage.key(i); // getting a key
-		var value = window.localStorage.getItem(key); // getting a value  (in ruby: hh[key] = x)
+		var key = window.localStorage.key(i); // geting the key
+		var value = window.localStorage.getItem(key); // getting a value, ruby analog : hh[key] = x
 
 		if(key.indexOf('product_') == 0)
 		{
@@ -74,7 +66,6 @@ function cancel_order()
 	update_orders_button();
 
 	$('#cart').text('Your cart is now empty');
-	
+
 	return false;	
 }
-
